@@ -1,10 +1,11 @@
+//define a canvas
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d')
-const audio = document.querySelector("audio")
-
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
+//define a consts
+const audio = document.querySelector("audio")
 const scoreEl = document.querySelector('#scoreEl')
 console.log(scoreEl)
 const startGameBtn = document.querySelector('#startGameBtn')
@@ -130,12 +131,13 @@ class Particle {
 const x = canvas.width / 2
 const y = canvas.height / 2
 
+//first initialize of variables
 let player = new Player(x, y, 10, 'white')
 let projectiles = []
 let enemies = []
 let particles = []
 	
-
+//function listens for mouse presses in order to launch the projectile
 window.addEventListener('click', (event) => {
 	
 	console.log(projectiles)
@@ -155,6 +157,7 @@ window.addEventListener('click', (event) => {
 	)
 })
 
+//main
 startGameBtn.addEventListener('click', () => {
 	audio.volume = 0.2
 	audio.play()

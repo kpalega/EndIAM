@@ -4,7 +4,7 @@ var keys = {
 	left: false,
 	right: false
 }
-
+//change state when key was pressed
 window.onkeydown = function(e){
 	var kc = e.keyCode
 	e.preventDefault()
@@ -14,6 +14,7 @@ window.onkeydown = function(e){
 	else if(kc === 83) keys.down = true;	
 }
 
+//chage state when key was released
 window.onkeyup = function(e){
 	var kc = e.keyCode
 	e.preventDefault()
@@ -23,6 +24,7 @@ window.onkeyup = function(e){
 	else if(kc === 83) keys.down = false;	
 }
 
+//verify what key was pressed
 function checkMove(){
 	if(keys.up){
 		if(player.y - player.radius >= 0) {

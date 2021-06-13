@@ -1,4 +1,5 @@
 function spawnEnemies() {
+	//functions spawn enemies every half second
 	setInterval(()=> {
 		
 		const radius = Math.random() * (40 - 4) +  4
@@ -6,6 +7,7 @@ function spawnEnemies() {
 		let x
 		let y
 		
+		//generate a enemy position 
 		if (Math.random() < 0.5) {
 		
 			x = Math.random() < 0.5 ? 0 - radius : canvas.width + radius

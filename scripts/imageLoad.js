@@ -1,3 +1,5 @@
+
+//function to load background image
 function imageLoad(url){
     var image = new Image()
     image.src = url

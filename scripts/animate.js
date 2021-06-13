@@ -1,6 +1,7 @@
 let animationId
 let score = 0
 function animate() {
+	//prepare a background
 	animationId = requestAnimationFrame(animate)
     c.save()
     c.globalAlpha = 0.1
@@ -8,6 +9,7 @@ function animate() {
     imageLoad('https://wallpaperaccess.com/full/1253106.jpg')
 	c.fillRect(0, 0, canvas.width, canvas.height)
     c.restore()
+
     player.draw()
     particles.forEach((particle, index) => {
         if( particle.alpha <= 0){
@@ -19,7 +21,7 @@ function animate() {
 	projectiles.forEach((projectile, index) => {
 		projectile.update()
 		
-		//remove from edges of screen
+	//remove from edges of screen
 	if (
 	projectile.x + projectile.radius < 0 ||
 	projectile.x - projectile.radius > canvas.width ||
@@ -80,11 +82,11 @@ function animate() {
 					    projectiles.splice(projectileIndex, 1)
 				    },0)
                 } else {
-                    //remove from scene
                     //icrease score
                     score += 250
                     scoreEl.innerHTML = score
-				    setTimeout(() => {
+                    //remove enemy
+					setTimeout(() => {
 					    enemies.splice(index, 1)
 					    projectiles.splice(projectileIndex, 1)
 				    },0)
