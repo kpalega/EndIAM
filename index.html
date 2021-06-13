@@ -6,7 +6,7 @@
     <body>
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         
-        <audio src="./metheme.mp3" loop="true"></audio>
+        <audio src="sound/metheme.mp3" loop="true"></audio>
         
         <div class="fixed text-white text-sm ml-2 mt-1 select-none">
             <span>Score: </span><span id = "scoreEl">0</span>
@@ -24,9 +24,15 @@
         </div>
 
         <canvas></canvas>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./index.js"></script>
-
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>      
+		<script src="scripts/imageLoad.js"></script>
+		<script src="scripts/init.js"></script>
+		<script src="scripts/checkmove.js"></script>
+		<script src="scripts/spawnEnemies.js"></script>
+		<script src="scripts/animate.js"></script>
+		<script src="scripts/index.js"></script>
+		
         <style>
             body{
                 margin:0;
